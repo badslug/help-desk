@@ -2,6 +2,13 @@
 
 AI lead help desk software using agents to guide support ticket creation.
 
+> Note: The help desk AI will try to match tickets to Help Desk categories. Adding at least some categories via the `/admin` page and providing enough information in the `description` is critical in enabling the AI to properly match tickets to categories.
+
+The app has two main web pages:
+
+- `/` - the main help desk that users will visit
+- `/admin` - where help desk agents will manage help tickets and configure the system (adding Categories)
+
 ## Set up
 
 The app is a [SvelteKit](https://svelte.dev/docs/kit/introduction) which will run in any Node.js environment. Data is saved locally in a sqlite database with [Drizzle](https://orm.drizzle.team/) as an ORM (making it easy to migrate to a production database later). To begin, you will need the latest stable [node.js](https://nodejs.org) installed. The project uses [Volta](https://volta.sh) for pinning node and npm versions so it is recommended but not required to install Volta which will automatically configure node and npm to the correct versions when running npm in the project directory.
