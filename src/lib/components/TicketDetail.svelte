@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Markdown from 'svelte-exmarkdown';
 	import { Category, Ticket } from '$lib/models';
 	import TicketStatus from '$lib/components/TicketStatus.svelte';
 	import CategoryTag from '$lib/components/CategoryTag.svelte';
@@ -17,7 +18,7 @@
 	<h1><TicketStatus status={ticket.open ? 'open' : 'closed'} /> {ticket.name}</h1>
 	<p class="tid">#{ticket.id} <CategoryTag {category} /></p>
 
-	<p class="description">{ticket.description}</p>
+	<Markdown md={ticket.description} />
 </div>
 
 <style>

@@ -13,6 +13,8 @@
 		showOpened: boolean;
 		/** The list of tickets to display in the table. */
 		tickets: Ticket[];
+		/** Path to the tickets details page */
+		path: string;
 		/** Callback when the filter mode changes. */
 		onFilterUpdated: (showOpened: boolean) => void;
 	}
@@ -22,6 +24,7 @@
 		closedTotal = 0,
 		showOpened = true,
 		tickets = [],
+		path = '/tickets',
 		...props
 	}: Props = $props();
 </script>
@@ -35,7 +38,7 @@
 	/>
 	<tbody>
 		{#each tickets as ticket (ticket.id)}
-			<TicketTableRow {ticket} />
+			<TicketTableRow {ticket} {path} />
 		{:else}
 			<tr>
 				<td colspan="3" class="empty">No Results</td>

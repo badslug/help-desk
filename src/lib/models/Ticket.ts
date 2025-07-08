@@ -35,3 +35,28 @@ export class Ticket {
 		this.category = category;
 	}
 }
+
+export class ProposedTicket {
+	name: string;
+	email: string;
+	category: string;
+	category_id: number;
+	title: string;
+	description: string;
+
+	constructor(
+		name: string = '',
+		email: string = '',
+		category: string = '',
+		category_id: number = 0,
+		title: string = '',
+		description: string = ''
+	) {
+		this.name = name;
+		this.email = email;
+		this.category = category;
+		this.category_id = category_id;
+		this.title = title;
+		this.description = description;
+	}
+}

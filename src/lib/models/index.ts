@@ -5,3 +5,4 @@ export * from './User';
 export * from './Agent';
 export * from './Ticket';
 export * from './Category';
+export * from './Message';

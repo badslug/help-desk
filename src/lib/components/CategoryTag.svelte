@@ -11,9 +11,9 @@
 </script>
 
 {#if category}
-<span class="ticket-container" {...props}>
-	<Tag label={category.name} color={category.color} />
-</span>
+	<span class="ticket-container" {...props}>
+		<Tag label={category.name} color={category.color} />
+	</span>
 {/if}
 
 <style>
